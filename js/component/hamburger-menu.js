@@ -35,7 +35,7 @@ const initializeHamburgerMenu = () => {
         document.body.style.overflow = 'hidden';
         menu.animate(openingKeyframes, openingOptions);
     };
-    openMenu();
+
     const closeMenu = () => {
         const closingAnim = menu.animate(closingKeyframes, closingOptions);
 

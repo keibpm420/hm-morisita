@@ -11,7 +11,7 @@ component > cta
     display: grid;
     place-items: center;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
 
     @include g.mq() {
         padding: 147rem 0 140rem;
