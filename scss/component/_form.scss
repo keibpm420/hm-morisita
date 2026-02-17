@@ -1,0 +1,51 @@
+@use '../global' as g;
+
+/*!
+component > form
+------------------------------
+*/
+.c-form-required {
+    color: var(--color-red);
+    font-size: 14rem;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+}
+
+.c-form-label {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+}
+
+.c-form-text {
+    width: 100%;
+    border-radius: 4rem;
+    padding: 16rem;
+    background-color: var(--color-bg-lightest-blue);
+
+    @include g.mq() {
+        padding: 16rem 24rem;
+    }
+
+    &::placeholder {
+        line-height: 1.5;
+        opacity: 0.6;
+    }
+}
+
+.c-form-text--textarea {
+    field-sizing: content;
+    min-height: 120rem;
+
+    @include g.mq() {
+        min-height: 160rem;
+    }
+
+    &::placeholder {
+        line-height: 1.5;
+
+        @include g.mq() {
+            line-height: 1.9;
+        }
+    }
+}

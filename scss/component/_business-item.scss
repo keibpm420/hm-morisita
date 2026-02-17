@@ -1,0 +1,67 @@
+@use '../global' as g;
+
+/*!
+component > business-item
+------------------------------
+*/
+.c-business-item-item {
+    a {
+        display: grid;
+        grid-template-columns: 1fr 40rem;
+        gap: 16rem;
+        align-items: center;
+        padding: 19.5rem 16rem 14.5rem;
+        border-bottom: 1rem solid var(--color-sep-lightgrey);
+
+        @include g.mq() {
+            padding: 24rem 16rem 23rem;
+            grid-template-columns: 1fr 44rem;
+        }
+    }
+
+    &:first-child {
+        a {
+            border-top: 1rem solid var(--color-sep-lightgrey);
+        }
+    }
+}
+
+.c-business-item-title {
+    font-size: 18rem;
+    line-height: calc(26 / 18);
+    letter-spacing: 0.05em;
+    font-weight: 500;
+
+    @include g.mq() {
+        font-size: 20rem;
+        line-height: calc(29 / 20);
+    }
+}
+
+.c-business-item-item {
+    span {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 36rem;
+        background-color: var(--color-bg-lightest-blue);
+        display: grid;
+        place-items: center;
+
+        @include g.mq() {
+            width: 44rem;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 12rem;
+            height: 11rem;
+            background-color: var(--color-bg-primary);
+            mask-image: url('../img/icon-arrow.svg');
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            translate: 1rem -1rem;
+        }
+    }
+}

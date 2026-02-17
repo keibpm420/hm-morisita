@@ -1,0 +1,91 @@
+@use '../../global' as g;
+
+/*!
+page > top > top-subpage
+------------------------------
+*/
+.top-subpage {
+    padding-block: 80rem;
+}
+
+.top-subpage-list {
+    @include g.mq() {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 92rem;
+    }
+}
+
+.top-subpage-item {
+    @include g.mq() {
+        position: relative;
+    }
+
+    &:not(:last-child) {
+        padding-bottom: 31.5rem;
+        margin-bottom: 31.5rem;
+        border-bottom: 1rem solid var(--color-sep-lightgrey);
+
+        @include g.mq() {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border-bottom: none;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 1rem;
+                height: 100%;
+                background-color: var(--color-sep-lightgrey);
+                position: absolute;
+                top: 0;
+                left: calc(100% + 46rem);
+            }
+        }
+    }
+}
+
+.top-subpage-item a {
+    display: grid;
+    gap: 16rem;
+    padding: 0 16rem;
+
+    @include g.mq() {
+        gap: 32rem;
+        padding: 16rem 0;
+    }
+}
+
+.top-subpage-text {
+    height: 56rem;
+
+    @include g.mq() {
+        height: 60rem;
+    }
+}
+
+.top-subpage-arrow {
+    width: 40rem;
+    aspect-ratio: 1;
+    border-radius: 100vh;
+    background-color: var(--color-bg-lightest-blue);
+    display: grid;
+    place-items: center;
+    justify-self: flex-end;
+
+    @include g.mq() {
+        width: 44rem;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 12rem;
+        height: 11rem;
+        background-color: var(--color-bg-primary);
+        mask-image: url('../img/icon-arrow.svg');
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+}

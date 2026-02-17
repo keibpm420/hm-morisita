@@ -1,0 +1,26 @@
+@use '../global' as g;
+
+/*!
+component > title
+------------------------------
+*/
+.c-title {
+    display: grid;
+    gap: 8rem;
+}
+
+.c-title-en {
+    display: block;
+    font-family: var(--font-family-en);
+    font-size: 40rem;
+    font-weight: 400;
+    line-height: calc(46 / 40);
+    color: var(--color-font-primary);
+}
+
+.c-title-ja {
+    color: var(--color-font-light-base);
+    line-height: calc(22 / 15);
+    font-size: 15rem;
+    font-weight: 500;
+}

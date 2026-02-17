@@ -1,0 +1,107 @@
+@use '../global' as g;
+
+/*!
+component > cta
+------------------------------
+*/
+.c-cta {
+    background-color: var(--color-bg-lightest-blue);
+    border-radius: 32rem 32rem 0 0;
+    padding: 99rem 0 106rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+
+    @include g.mq() {
+        padding: 147rem 0 140rem;
+    }
+}
+
+.c-cta-bg-text {
+    opacity: 0.0713;
+    font-family: var(--font-family-en);
+    font-weight: 400;
+    font-size: 120rem;
+    line-height: calc(139 / 120);
+    color: var(--color-font-primary);
+    white-space: nowrap;
+    position: absolute;
+    top: 133rem;
+    left: -341rem;
+    pointer-events: none;
+    user-select: none;
+
+    @include g.mq() {
+        top: 172rem;
+        left: 0;
+        font-size: 176rem;
+        line-height: calc(204 / 176);
+    }
+}
+
+.c-cta-button {
+    width: 218rem;
+    aspect-ratio: 1;
+    border-radius: 100vh;
+    background-image: var(--color-bg-cta);
+    color: var(--color-font-white);
+    position: relative;
+
+    @include g.mq() {
+        width: 280rem;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        width: 240rem;
+        aspect-ratio: 1;
+        border-radius: 100vh;
+        background-color: transparent;
+        border: 1rem solid var(--color-bg-primary);
+
+        @include g.mq() {
+            width: 308rem;
+        }
+    }
+}
+
+.c-cta-button-text-wrap {
+    position: absolute;
+    top: 79.12rem;
+    left: 50%;
+    translate: -50% 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8rem;
+
+    @include g.mq() {
+        top: 93.87rem;
+        gap: 16rem;
+    }
+}
+
+.c-cta-button-text-en {
+    font-family: var(--font-family-en);
+    font-weight: 400;
+    font-size: 32rem;
+    line-height: calc(37 / 32);
+    text-transform: uppercase;
+
+    @include g.mq() {
+        line-height: calc(46 / 40);
+        font-size: 40rem;
+    }
+}
+
+.c-cta-button-text-ja {
+    font-size: 15rem;
+    line-height: 1;
+    font-size: calc(22 / 15);
+}

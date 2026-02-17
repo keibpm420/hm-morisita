@@ -1,0 +1,57 @@
+@use '../global' as g;
+
+/*!
+component > button
+------------------------------
+*/
+.c-button {
+    background-color: var(--color-bg-lightest-blue);
+    padding: 16rem 24rem;
+    font-family: var(--font-family-en);
+    font-weight: 400;
+    line-height: calc(19 / 16);
+    font-size: 16rem;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 53rem;
+    border-radius: 100vh;
+    width: max-content;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 12rem;
+        aspect-ratio: 1;
+        mask-image: url('../img/icon-arrow.svg');
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: var(--color-bg-primary);
+    }
+}
+
+.c-button--reverse {
+    flex-direction: row-reverse;
+
+    &::after {
+        rotate: 180deg;
+    }
+}
+
+.c-button--large {
+    padding: 24rem 36rem;
+    gap: 98rem;
+    font-size: 18rem;
+}
+
+.c-button--transparent {
+    background-color: var(--color-bg-white-transparent);
+    border: 1rem solid var(--color-bg-white);
+    padding: 23rem 31rem;
+    color: var(--color-font-white);
+
+    &::after {
+        background-color: var(--color-bg-white);
+    }
+}

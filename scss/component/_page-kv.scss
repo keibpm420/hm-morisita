@@ -1,0 +1,200 @@
+@use '../global' as g;
+
+/*!
+component > page-kv
+------------------------------
+*/
+.c-page-kv {
+    padding-top: 121rem;
+    position: relative;
+
+    @include g.mq() {
+        padding-top: 183rem;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 255rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--color-bg-lightest-blue);
+        z-index: var(--z-index-negative);
+
+        @include g.mq() {
+            height: 408rem;
+        }
+    }
+}
+
+.c-page-kv--large {
+    &::before {
+        height: 466rem;
+
+        @include g.mq() {
+            height: 432rem;
+        }
+    }
+}
+
+.c-page-kv--medium {
+    &::before {
+        height: 437rem;
+
+        @include g.mq() {
+            height: 432rem;
+        }
+    }
+}
+
+.c-page-kv-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 19rem;
+
+    @include g.mq() {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 56rem;
+    }
+}
+
+.c-page-kv-thumbnail {
+    height: 169rem;
+    background-color: var(--color-bg-white);
+    border: 1rem solid var(--color-sep-lightgrey);
+    border-radius: 0 0 0 56rem;
+    position: relative;
+
+    @include g.mq() {
+        width: 484rem;
+        height: 323rem;
+    }
+
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        width: 239rem;
+
+        @include g.mq() {
+            width: 308rem;
+            left: 72.75rem;
+            translate: 0 -50%;
+        }
+    }
+}
+
+.c-page-kv-title {
+    display: grid;
+    gap: 8rem;
+
+    @include g.mq() {
+        gap: 16rem;
+    }
+}
+
+.c-page-kv-title03 {
+    margin-top: 24.5rem;
+}
+
+.c-page-kv-title-en {
+    font-family: var(--font-family-en);
+    font-size: 50rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--color-font-primary);
+
+    @include g.mq() {
+        font-size: 72rem;
+    }
+}
+
+.c-page-kv-title-ja {
+    line-height: 1.45;
+    font-weight: 500;
+
+    @include g.mq() {
+        font-size: 18rem;
+        letter-spacing: 0.05em;
+    }
+}
+
+.c-page-kv-breadcrumb {
+    margin-top: 62rem;
+
+    @include g.mq() {
+        margin-top: 128rem;
+    }
+}
+
+.c-page-kv-breadcrumb--large {
+    margin-top: 56rem;
+
+    @include g.mq() {
+        margin-top: 0;
+        position: absolute;
+        left: 70rem;
+        bottom: 24.5rem;
+    }
+}
+
+.c-page-kv-title02 {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: 12rem 8rem;
+
+    @include g.mq() {
+        margin-top: 24.5rem;
+    }
+}
+
+.c-page-kv-title02-en {
+    font-family: var(--font-family-en);
+    font-size: 20rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--color-font-primary);
+
+    @include g.mq() {
+        font-size: 24rem;
+    }
+}
+
+.c-page-kv-title02-ja {
+    line-height: 1.5;
+    color: var(--color-font-light-base);
+
+    @include g.mq() {
+        line-height: 1.1;
+        letter-spacing: 0.05em;
+        font-size: 14rem;
+    }
+}
+
+.c-page-kv-title02-time {
+    color: #333;
+    font-size: 17rem;
+    font-family: var(--font-family-en);
+    line-height: calc(20 / 17);
+    font-weight: 400;
+    justify-self: flex-end;
+}
+
+.c-page-kv-title02-text {
+    font-size: 28rem;
+    letter-spacing: 0.05em;
+    line-height: 1.45;
+    font-weight: 500;
+    grid-row: 2/3;
+    grid-column: 1/-1;
+
+    @include g.mq() {
+        font-size: 44rem;
+    }
+}

@@ -1,0 +1,44 @@
+@use '../global' as g;
+
+/*!
+utility > utility
+------------------------------
+*/
+.u-visually-hidden {
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    padding: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(50%) !important;
+    margin: -1px !important;
+}
+
+.u-ptb {
+    padding-block: 80rem !important;
+
+    @include g.mq() {
+        padding-block: 120rem !important;
+    }
+}
+
+.u-ml {
+    margin-left: 31rem !important;
+}
+
+.u-sp-block {
+    display: block;
+
+    @include g.mq() {
+        display: inline;
+    }
+}
+
+.u-pc-block {
+    @include g.mq() {
+        display: block;
+    }
+}

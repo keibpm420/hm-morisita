@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>コーディングテンプレート</title>
+        <meta name="description" content="ページの説明" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- favicon/webclipicon -->
+        <link rel="icon" href="./img/favicon.ico" />
+        <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="./img/webclip.png" />
+
+        <!-- ogp -->
+        <meta property="og:site_name" content="サイト名" />
+        <meta property="og:url" content="URL" />
+        <meta property="og:type" content="website or article" />
+        <meta property="og:title" content="ページのタイトル" />
+        <meta property="og:description" content="ページの説明" />
+        <meta property="og:image" content="URL" />
+        <meta property="og:locale" content="ja_JP" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="ページの説明" />
+        <meta name="twitter:image:src" content="URL" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- css -->
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- js -->
+        <script src="js/main.js" type="module"></script>
+
+        <style>
+            .spacer {
+                height: 100rem;
+            }
+            html {
+                /* background-color: black; */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- kv01 -->
+        <!-- <header class="header">
+            <p class="header-logo">
+                <a href="./index.html">
+                    <img
+                        src="./img/logo.svg"
+                        width="300"
+                        height="90"
+                        alt="MORISITA corporation"
+                        decoding="async"
+                    />
+                </a>
+            </p>
+
+            <dialog class="header-menu js-header-menu" aria-label="サイトメニュー">
+                <div class="header-menu-head">
+                    <p class="header-menu-logo">
+                        <a href="./index.html">
+                            <img
+                                src="./img/logo-white.svg"
+                                width="300"
+                                height="90"
+                                alt="MORISITA corporation"
+                                decoding="async"
+                            />
+                        </a>
+                    </p>
+
+                    <button
+                        class="header-menu-close-button js-header-menu-close-button"
+                        type="button"
+                        aria-label="メニューを閉じる"
+                    >
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <nav class="header-menu-nav">
+                    <ul class="header-menu-list">
+                        <li class="header-menu-item">
+                            <a href="./index.html">
+                                <span class="header-menu-text-en header-menu-text-en--home"
+                                    >HOME</span
+                                >
+                                <span class="header-menu-text-ja header-menu-text-ja--home"
+                                    >ホーム</span
+                                >
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item">
+                            <a href="./company.html">
+                                <span class="header-menu-text-en">COMPANY</span>
+                                <span class="header-menu-text-ja">会社概要</span>
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item header-menu-item--has-submenu">
+                            <a href="./business.html">
+                                <span class="header-menu-text-en">BUSINESS</span>
+                                <span class="header-menu-text-ja header-menu-text-ja--business"
+                                    >事業紹介</span
+                                >
+                            </a>
+                            <ul class="header-submenu-list">
+                                <li class="header-submenu-item">
+                                    <a href="">特殊ボルトナットの設計・製造</a>
+                                </li>
+
+                                <li class="header-submenu-item">
+                                    <a href="">特殊ボルトナットのオーダーメイド</a>
+                                </li>
+
+                                <li class="header-submenu-item">
+                                    <a href="">ISO 9001 認証取得の品質管理</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="header-menu-item--business">
+                            <a href="">特殊ボルトナットの設計・製造</a>
+                        </li>
+
+                        <li class="header-menu-item--business">
+                            <a href="">特殊ボルトナットのオーダーメイド</a>
+                        </li>
+
+                        <li class="header-menu-item--business">
+                            <a href="">ISO 9001 認証取得の品質管理</a>
+                        </li>
+
+                        <li class="header-menu-item">
+                            <a href="./product.html">
+                                <span class="header-menu-text-en">PRODUCT</span>
+                                <span class="header-menu-text-ja">製品紹介</span>
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item">
+                            <a href="./access.html">
+                                <span class="header-menu-text-en">ACCESS</span>
+                                <span class="header-menu-text-ja">アクセス</span>
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item header-menu-item--contact u-ml">
+                            <a href="./contact.html">
+                                <span class="header-menu-text-en">CONTACT</span>
+                                <span class="header-menu-text-ja">お問い合わせ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </dialog>
+
+            <button
+                aria-label="メニューを開く"
+                class="header-menu-open-button js-header-menu-open-button"
+                type="button"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <div class="c-page-kv">
+            <div class="l-container">
+                <div class="c-page-kv-title">
+                    <span class="c-page-kv-title-en">NEWS</span>
+                    <h1 class="c-page-kv-title-ja">ニュース一覧</h1>
+                </div>
+
+                <div class="c-page-kv-breadcrumb">
+                    <div class="c-breadcrumb">
+                        <ol class="c-breadcrumb-list">
+                            <li class="c-breadcrumb-item">
+                                <a href="./index.html">HOME</a>
+                            </li>
+
+                            <li class="c-breadcrumb-item c-breadcrumb-item--current">
+                                ニュース一覧
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- end kv01 -->
+
+        <!-- kv02 -->
+        <!-- <header class="header">
+            <p class="header-logo">
+                <a href="./index.html">
+                    <img
+                        src="./img/logo.svg"
+                        width="300"
+                        height="90"
+                        alt="MORISITA corporation"
+                        decoding="async"
+                    />
+                </a>
+            </p>
+
+            <dialog class="header-menu js-header-menu" aria-label="サイトメニュー">
+                <div class="header-menu-head">
+                    <p class="header-menu-logo">
+                        <a href="./index.html">
+                            <img
+                                src="./img/logo-white.svg"
+                                width="300"
+                                height="90"
+                                alt="MORISITA corporation"
+                                decoding="async"
+                            />
+                        </a>
+                    </p>
+
+                    <button
+                        class="header-menu-close-button js-header-menu-close-button"
+                        type="button"
+                        aria-label="メニューを閉じる"
+                    >
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <nav class="header-menu-nav">
+                    <ul class="header-menu-list">
+                        <li class="header-menu-item">
+                            <a href="./index.html">
+                                <span class="header-menu-text-en header-menu-text-en--home"
+                                    >HOME</span
+                                >
+                                <span class="header-menu-text-ja header-menu-text-ja--home"
+                                    >ホーム</span
+                                >
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item">
+                            <a href="./company.html">
+                                <span class="header-menu-text-en">COMPANY</span>
+                                <span class="header-menu-text-ja">会社概要</span>
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item header-menu-item--has-submenu">
+                            <a href="./business.html">
+                                <span class="header-menu-text-en">BUSINESS</span>
+                                <span class="header-menu-text-ja header-menu-text-ja--business"
+                                    >事業紹介</span
+                                >
+                            </a>
+                            <ul class="header-submenu-list">
+                                <li class="header-submenu-item">
+                                    <a href="">特殊ボルトナットの設計・製造</a>
+                                </li>
+
+                                <li class="header-submenu-item">
+                                    <a href="">特殊ボルトナットのオーダーメイド</a>
+                                </li>
+
+                                <li class="header-submenu-item">
+                                    <a href="">ISO 9001 認証取得の品質管理</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="header-menu-item--business">
+                            <a href="">特殊ボルトナットの設計・製造</a>
+                        </li>
+
+                        <li class="header-menu-item--business">
+                            <a href="">特殊ボルトナットのオーダーメイド</a>
+                        </li>
+
+                        <li class="header-menu-item--business">
+                            <a href="">ISO 9001 認証取得の品質管理</a>
+                        </li>
+
+                        <li class="header-menu-item">
+                            <a href="./product.html">
+                                <span class="header-menu-text-en">PRODUCT</span>
+                                <span class="header-menu-text-ja">製品紹介</span>
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item">
+                            <a href="./access.html">
+                                <span class="header-menu-text-en">ACCESS</span>
+                                <span class="header-menu-text-ja">アクセス</span>
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item header-menu-item--contact">
+                            <a href="./contact.html">
+                                <span class="header-menu-text-en">CONTACT</span>
+                                <span class="header-menu-text-ja">お問い合わせ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </dialog>
+
+            <button
+                aria-label="メニューを開く"
+                class="header-menu-open-button js-header-menu-open-button"
+                type="button"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <div class="c-page-kv c-page-kv--large">
+            <div class="l-container">
+                <div class="c-page-kv-inner">
+                    <div class="c-page-kv-thumbnail">
+                        <img
+                            src="./img/logo.svg"
+                            width="300"
+                            height="90"
+                            alt="MORISITA Corporation"
+                            decoding="async"
+                        />
+                    </div>
+
+                    <div class="c-page-kv-title02">
+                        <span class="c-page-kv-title02-en">BUSINESS</span>
+                        <span class="c-page-kv-title02-ja">事業紹介</span>
+                        <time class="c-page-kv-title02-time" datetime="2024-02-10">2024.02.10</time>
+                        <h1 class="c-page-kv-title02-text">特殊ボルトナットの設計・製造</h1>
+                    </div>
+                </div>
+
+                <div class="c-page-kv-breadcrumb c-page-kv-breadcrumb--large">
+                    <div class="c-breadcrumb">
+                        <ol class="c-breadcrumb-list">
+                            <li class="c-breadcrumb-item">
+                                <a href="./index.html">HOME</a>
+                            </li>
+
+                            <li class="c-breadcrumb-item">
+                                <a href="./index.html">事業内容</a>
+                            </li>
+
+                            <li class="c-breadcrumb-item c-breadcrumb-item--current">
+                                事業特殊ボルトナットの設計・製造
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- end kv02 -->
+
+        <!-- kv03 -->
+        <!-- <header class="header">
+            <p class="header-logo">
+                <a href="./index.html">
+                    <img
+                        src="./img/logo.svg"
+                        width="300"
+                        height="90"
+                        alt="MORISITA corporation"
+                        decoding="async"
+                    />
+                </a>
+            </p>
+
+            <dialog class="header-menu js-header-menu" aria-label="サイトメニュー">
+                <div class="header-menu-head">
+                    <p class="header-menu-logo">
+                        <a href="./index.html">
+                            <img
+                                src="./img/logo-white.svg"
+                                width="300"
+                                height="90"
+                                alt="MORISITA corporation"
+                                decoding="async"
+                            />
+                        </a>
+                    </p>
+
+                    <button
+                        class="header-menu-close-button js-header-menu-close-button"
+                        type="button"
+                        aria-label="メニューを閉じる"
+                    >
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <nav class="header-menu-nav">
+                    <ul class="header-menu-list">
+                        <li class="header-menu-item">
+                            <a href="./index.html">
+                                <span class="header-menu-text-en header-menu-text-en--home"
+                                    >HOME</span
+                                >
+                                <span class="header-menu-text-ja header-menu-text-ja--home"
+                                    >ホーム</span
+                                >
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item">
+                            <a href="./company.html">
+                                <span class="header-menu-text-en">COMPANY</span>
+                                <span class="header-menu-text-ja">会社概要</span>
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item header-menu-item--has-submenu">
+                            <a href="./business.html">
+                                <span class="header-menu-text-en">BUSINESS</span>
+                                <span class="header-menu-text-ja header-menu-text-ja--business"
+                                    >事業紹介</span
+                                >
+                            </a>
+                            <ul class="header-submenu-list">
+                                <li class="header-submenu-item">
+                                    <a href="">特殊ボルトナットの設計・製造</a>
+                                </li>
+
+                                <li class="header-submenu-item">
+                                    <a href="">特殊ボルトナットのオーダーメイド</a>
+                                </li>
+
+                                <li class="header-submenu-item">
+                                    <a href="">ISO 9001 認証取得の品質管理</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="header-menu-item--business">
+                            <a href="">特殊ボルトナットの設計・製造</a>
+                        </li>
+
+                        <li class="header-menu-item--business">
+                            <a href="">特殊ボルトナットのオーダーメイド</a>
+                        </li>
+
+                        <li class="header-menu-item--business">
+                            <a href="">ISO 9001 認証取得の品質管理</a>
+                        </li>
+
+                        <li class="header-menu-item">
+                            <a href="./product.html">
+                                <span class="header-menu-text-en">PRODUCT</span>
+                                <span class="header-menu-text-ja">製品紹介</span>
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item">
+                            <a href="./access.html">
+                                <span class="header-menu-text-en">ACCESS</span>
+                                <span class="header-menu-text-ja">アクセス</span>
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item header-menu-item--contact">
+                            <a href="./contact.html">
+                                <span class="header-menu-text-en">CONTACT</span>
+                                <span class="header-menu-text-ja">お問い合わせ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </dialog>
+
+            <button
+                aria-label="メニューを開く"
+                class="header-menu-open-button js-header-menu-open-button"
+                type="button"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <div class="c-page-kv c-page-kv--medium">
+            <div class="l-container">
+                <div class="c-page-kv-inner">
+                    <div class="c-page-kv-thumbnail">
+                        <img
+                            src="./img/logo.svg"
+                            width="300"
+                            height="90"
+                            alt="MORISITA Corporation"
+                            decoding="async"
+                        />
+                    </div>
+
+                    <div class="c-page-kv-title c-page-kv-title03">
+                        <span class="c-page-kv-title-en">NEWS</span>
+                        <h1 class="c-page-kv-title-ja">ニュース一覧</h1>
+                    </div>
+                </div>
+
+                <div class="c-page-kv-breadcrumb c-page-kv-breadcrumb--large">
+                    <div class="c-breadcrumb">
+                        <ol class="c-breadcrumb-list">
+                            <li class="c-breadcrumb-item">
+                                <a href="./index.html">HOME</a>
+                            </li>
+
+                            <li class="c-breadcrumb-item c-breadcrumb-item--current">
+                                ニュース一覧
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- end kv03 -->
+
+        <!-- コンポーネント -->
+        <div class="l-container">
+            <!--  <div style="background-color: #333; display: inline-grid; padding: 10rem; gap: 10rem">
+                <a href="" class="c-button">view more</a>
+                <a href="" class="c-button c-button--reverse">view more</a>
+                <a href="" class="c-button c-button--large">view more</a>
+
+            </div>
+
+            ->
+
+            <!-- <div class="c-product-item">
+                <div class="c-product-item-thumbnail">
+                    <img
+                        src="https://placehold.jp/2000x600.png"
+                        width="900"
+                        height="600"
+                        alt=""
+                        decoding="async"
+                    />
+                </div>
+
+                <span class="c-product-item-tag">自動車向け</span>
+
+                <p class="c-product-item-name">六角ボルト M10</p>
+            </div> -->
+
+            <!-- <label class="c-form-label" for="">お名前</label>
+
+            <span class="c-form-required">*必須</span>
+
+            <input class="c-form-text" placeholder="株式会社森下" type="text" name="" id="" />
+
+            <textarea
+                class="c-form-text c-form-text--textarea"
+                placeholder="お問い合わせ内容を入力してください"
+                name=""
+                id=""
+            ></textarea> -->
+
+            <!-- <div class="l-container">
+                <table class="">
+                    <tbody>
+                        <tr class="c-tableItem">
+                            <th class="c-tableItem-label c-tableItem-label--large">会社名</th>
+                            <td class="c-tableItem-data">株式会社森下</td>
+                        </tr>
+                        <tr class="c-tableItem">
+                            <th class="c-tableItem-label">会社名</th>
+                            <td class="c-tableItem-data">株式会社森下</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> -->
+        </div>
+
+        <!-- header -->
+        <!-- <header class="header">
+            <h1 class="header-logo">
+                <a href="./index.html">
+                    <img
+                        src="./img/logo.svg"
+                        width="300"
+                        height="90"
+                        alt="MORISITA corporation"
+                        decoding="async"
+                    />
+                </a>
+            </h1>
+
+            <dialog class="header-menu js-header-menu" aria-label="サイトメニュー">
+                <div class="header-menu-head">
+                    <p class="header-menu-logo">
+                        <a href="./index.html">
+                            <img
+                                src="./img/logo-white.svg"
+                                width="300"
+                                height="90"
+                                alt="MORISITA corporation"
+                                decoding="async"
+                            />
+                        </a>
+                    </p>
+
+                    <button
+                        class="header-menu-close-button js-header-menu-close-button"
+                        type="button"
+                        aria-label="メニューを閉じる"
+                    >
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <nav class="header-menu-nav">
+                    <ul class="header-menu-list">
+                        <li class="header-menu-item">
+                            <a href="./index.html">
+                                <span class="header-menu-text-en header-menu-text-en--home"
+                                    >HOME</span
+                                >
+                                <span class="header-menu-text-ja header-menu-text-ja--home"
+                                    >ホーム</span
+                                >
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item">
+                            <a href="./company.html">
+                                <span class="header-menu-text-en">COMPANY</span>
+                                <span class="header-menu-text-ja">会社概要</span>
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item header-menu-item--has-submenu">
+                            <a href="./business.html">
+                                <span class="header-menu-text-en">BUSINESS</span>
+                                <span class="header-menu-text-ja header-menu-text-ja--business"
+                                    >事業紹介</span
+                                >
+                            </a>
+                            <ul class="header-submenu-list">
+                                <li class="header-submenu-item">
+                                    <a href="">特殊ボルトナットの設計・製造</a>
+                                </li>
+
+                                <li class="header-submenu-item">
+                                    <a href="">特殊ボルトナットのオーダーメイド</a>
+                                </li>
+
+                                <li class="header-submenu-item">
+                                    <a href="">ISO 9001 認証取得の品質管理</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="header-menu-item--business">
+                            <a href="">特殊ボルトナットの設計・製造</a>
+                        </li>
+
+                        <li class="header-menu-item--business">
+                            <a href="">特殊ボルトナットのオーダーメイド</a>
+                        </li>
+
+                        <li class="header-menu-item--business">
+                            <a href="">ISO 9001 認証取得の品質管理</a>
+                        </li>
+
+                        <li class="header-menu-item">
+                            <a href="./product.html">
+                                <span class="header-menu-text-en">PRODUCT</span>
+                                <span class="header-menu-text-ja">製品紹介</span>
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item">
+                            <a href="./access.html">
+                                <span class="header-menu-text-en">ACCESS</span>
+                                <span class="header-menu-text-ja">アクセス</span>
+                            </a>
+                        </li>
+
+                        <li class="header-menu-item header-menu-item--contact">
+                            <a href="./contact.html">
+                                <span class="header-menu-text-en">CONTACT</span>
+                                <span class="header-menu-text-ja">お問い合わせ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </dialog>
+
+            <button
+                aria-label="メニューを開く"
+                class="header-menu-open-button js-header-menu-open-button"
+                type="button"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header> -->
+        <!-- end header
+
+        <!-- footer -->
+        <!-- <footer class="footer">
+            <button class="footer-button-to-top" aria-label="ページトップへ" type="button">
+                <img src="./img/icon-arrow.svg" width="9" height="11" alt="" decoding="async" />
+            </button>
+
+            <div class="footer-info">
+                <p class="footer-logo">
+                    <a href="./index.html">
+                        <img
+                            src="./img/logo-white.svg"
+                            width="300"
+                            height="90"
+                            alt="MORISITA corporation"
+                            decoding="async"
+                        />
+                    </a>
+                </p>
+
+                <address class="footer-address">〒123-4567 東京都春日区青葉町2-11-7</address>
+
+                <p class="footer-tel">
+                    <span>Tel.</span>
+                    <span>03-1234-5678</span>
+                </p>
+
+                <small class="footer-copyright">© 2024 MORISITA inc.</small>
+            </div>
+
+            <nav class="footer-nav">
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="">HOME</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">会社概要</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">代表挨拶</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">アクセス</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li class="footer-item footer-item--has-submenu">
+                        <a href="">事業紹介</a>
+
+                        <ul class="footer-submenu-list">
+                            <li class="footer-submenu-item">
+                                <a href="">特殊ボルトナットの設計・製造</a>
+                            </li>
+                            <li class="footer-submenu-item">
+                                <a href="">特殊ボルトナットのオーダーメイド</a>
+                            </li>
+                            <li class="footer-submenu-item">
+                                <a href="">ISO 9001 認証取得の品質管理</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="">製品紹介</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="">お知らせ</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">お問い合わせ</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="">プライバシーポリシー</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer> -->
+        <!-- end footer -->
+    </body>
+</html>

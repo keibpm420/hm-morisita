@@ -1,0 +1,56 @@
+@use '../global' as g;
+
+/*!
+component > title-with-lead
+------------------------------
+*/
+.c-title-with-lead {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8rem;
+
+    @include g.mq() {
+        gap: 16rem 8rem;
+    }
+}
+
+.c-title-with-lead-en {
+    font-family: var(--font-family-en);
+    font-size: 20rem;
+    font-weight: 400;
+    line-height: calc(23 / 20);
+    color: var(--color-font-primary);
+    display: block;
+}
+
+.c-title-with-lead-ja {
+    color: var(--color-font-light-base);
+    line-height: calc(22 / 15);
+    font-size: 15rem;
+    font-weight: 500;
+    align-self: flex-end;
+}
+
+.c-title-with-lead-text {
+    font-size: 28rem;
+    letter-spacing: 0.05em;
+    line-height: calc(41 / 28);
+    grid-column: 1/3;
+    grid-row: 2/3;
+
+    @include g.mq() {
+        font-size: 32rem;
+        line-height: calc(46 / 32);
+    }
+}
+
+.c-title-with-lead-accent {
+    color: var(--color-font-primary);
+}
+
+.c-title-with-lead-en--white,
+.c-title-with-lead-ja--white,
+.c-title-with-lead-text--white,
+.c-title-with-lead-accent--white {
+    color: var(--color-font-white);
+}

@@ -1,0 +1,71 @@
+@use '../global' as g;
+
+/*!
+component > product-item
+------------------------------
+*/
+.c-product-item {
+    font-size: 16rem;
+    line-height: 1.5;
+    display: block;
+}
+
+.c-product-item-thumbnail {
+    img {
+        border-radius: 0 0 0 24rem;
+        aspect-ratio: 3/2;
+        object-fit: cover;
+
+        @include g.mq() {
+            border-radius: 0 0 0 32rem;
+            aspect-ratio: 404/269.33;
+        }
+    }
+}
+
+.c-product-item-thumbnail--white {
+    img {
+        border-radius: 0 0 0 32rem;
+    }
+}
+
+.c-product-item-tag {
+    display: block;
+    margin-top: 16rem;
+    border: 1rem solid var(--color-font-base);
+    padding: 1rem 7rem;
+    border-radius: 100vh;
+    width: fit-content;
+    font-size: 13rem;
+    line-height: 1.5;
+
+    @include g.mq() {
+        font-size: 16rem;
+    }
+}
+
+.c-product-item-tag--white {
+    font-size: 16rem;
+    border: 1rem solid var(--color-font-white);
+    color: var(--color-font-white);
+}
+
+.c-product-item-name {
+    margin-top: 8rem;
+    font-size: 15rem;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+
+    @include g.mq() {
+        font-size: 20rem;
+    }
+}
+
+.c-product-item-name--white {
+    font-size: 18rem;
+    color: var(--color-font-white);
+
+    @include g.mq() {
+        font-size: 20rem;
+    }
+}

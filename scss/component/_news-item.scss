@@ -1,0 +1,42 @@
+@use '../global' as g;
+
+/*!
+component > news-item
+------------------------------
+*/
+.c-news-item {
+    a {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8rem;
+        padding: 20rem 16rem 19rem;
+        border-bottom: 0.5rem solid var(--color-sep-lightgrey);
+
+        @include g.mq() {
+            gap: 16rem;
+            grid-template-columns: 120rem 1fr;
+            align-items: center;
+            padding: 32rem 16rem 31rem;
+        }
+    }
+
+    &:first-child {
+        border-top: 0.5rem solid var(--color-sep-lightgrey);
+    }
+}
+
+.c-news-item-time {
+    font-family: var(--font-family-en);
+    font-size: 17rem;
+    font-weight: 400;
+    line-height: calc(20 / 17);
+}
+
+.c-news-item-title {
+    font-weight: 500;
+    font-size: 15rem;
+
+    @include g.mq() {
+        font-size: 16rem;
+    }
+}
